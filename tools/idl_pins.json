@@ -1,0 +1,1419 @@
+{
+ "idls": {
+  "pump": {
+   "accounts": {
+    "BondingCurve": "17b7f83760d8ac60",
+    "FeeConfig": "8f3492bbdb7b4c9b",
+    "Global": "a7e8e8b1c86c727f",
+    "GlobalVolumeAccumulator": "ca2af62b8ebe1eff",
+    "QuoteControl": "38f423eec1d5a2c9",
+    "SharingConfig": "d84a0900388c5d4b",
+    "UserVolumeAccumulator": "56ff700e66359afa"
+   },
+   "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+   "events": {
+    "AddQuoteControlMintEvent": "a4af574a582d213e",
+    "AdminCtoEvent": "6e7ce262aaff1178",
+    "AdminSetIdlAuthorityEvent": "f53b46224bb96d5c",
+    "AdminUpdateTokenIncentivesEvent": "93fa6c78f71d43de",
+    "ClaimCashbackEvent": "e2d6f62107f293e5",
+    "ClaimTokenIncentivesEvent": "4facf631cd5bcee8",
+    "CloseUserVolumeAccumulatorEvent": "929fbdac925838f4",
+    "CollectCreatorFeeEvent": "7a027f010ebf0caf",
+    "CompleteEvent": "5f72619cd42e9808",
+    "CompletePumpAmmMigrationEvent": "bde95db95c94ea94",
+    "CreateEvent": "1b72a94ddeeb6376",
+    "DistributeCreatorFeesEvent": "a537817004b3ca28",
+    "DistributeFeeToHoldersEvent": "e3bed7ceb0b4a584",
+    "ExtendAccountEvent": "6161d7905d92167c",
+    "InitUserVolumeAccumulatorEvent": "86240d48e86582d8",
+    "MigrateBondingCurveCreatorEvent": "9ba768dcd56cf303",
+    "MinimumDistributableFeeEvent": "a8d884efebb63134",
+    "PostCompleteBuyEvent": "6fb06d8b316cd5fb",
+    "RemoveQuoteControlMintEvent": "2e21568600d5d130",
+    "ReservedFeeRecipientsEvent": "2bbcfa12dd4bbb5f",
+    "SetCreatorEvent": "ed347b25f5fb48d2",
+    "SetMetaplexCreatorEvent": "8ecb06207f69bfa2",
+    "SetParamsEvent": "dfc39ff63e308f83",
+    "SetQuoteControlAdminEvent": "4af88d45ca511ef7",
+    "SetQuoteControlMintReservesEvent": "a943276d6686b6e8",
+    "SetQuoteControlReservesAdminEvent": "43fbb3b6575ca921",
+    "SweepBondingCurveFeeEvent": "742b4dbd117a482b",
+    "SyncUserVolumeAccumulatorEvent": "c57aa77c74515bff",
+    "TradeEvent": "bddb7fd34ee661ee",
+    "UpdateCreatorFeeConfigEvent": "98c67c7c6af67fbf",
+    "UpdateGlobalAuthorityEvent": "b6c3892a23cecff7",
+    "UpdateMayhemVirtualParamsEvent": "757be4b6a1a8dcd6"
+   },
+   "instruction_args": {
+    "buy": [
+     [
+      "amount",
+      "u64"
+     ],
+     [
+      "max_sol_cost",
+      "u64"
+     ],
+     [
+      "track_volume",
+      "bool"
+     ],
+     [
+      "partial_fill",
+      "bool"
+     ]
+    ],
+    "buy_exact_quote_in_v2": [
+     [
+      "spendable_quote_in",
+      "u64"
+     ],
+     [
+      "min_tokens_out",
+      "u64"
+     ],
+     [
+      "partial_fill",
+      "bool"
+     ]
+    ],
+    "buy_exact_quote_in_v3": [
+     [
+      "spendable_quote_in",
+      "u64"
+     ],
+     [
+      "min_tokens_out",
+      "u64"
+     ],
+     [
+      "partial_fill",
+      "bool"
+     ]
+    ],
+    "buy_exact_sol_in": [
+     [
+      "spendable_sol_in",
+      "u64"
+     ],
+     [
+      "min_tokens_out",
+      "u64"
+     ],
+     [
+      "track_volume",
+      "bool"
+     ],
+     [
+      "partial_fill",
+      "bool"
+     ]
+    ],
+    "buy_v2": [
+     [
+      "amount",
+      "u64"
+     ],
+     [
+      "max_sol_cost",
+      "u64"
+     ],
+     [
+      "partial_fill",
+      "bool"
+     ]
+    ],
+    "buy_v3": [
+     [
+      "amount",
+      "u64"
+     ],
+     [
+      "max_sol_cost",
+      "u64"
+     ],
+     [
+      "partial_fill",
+      "bool"
+     ]
+    ],
+    "multi_hop_curve_swap": [
+     [
+      "amount_in",
+      "u64"
+     ],
+     [
+      "hop_fees",
+      "bytes"
+     ]
+    ],
+    "sell": [
+     [
+      "amount",
+      "u64"
+     ],
+     [
+      "min_sol_output",
+      "u64"
+     ]
+    ],
+    "sell_v2": [
+     [
+      "amount",
+      "u64"
+     ],
+     [
+      "min_sol_output",
+      "u64"
+     ]
+    ],
+    "sell_v3": [
+     [
+      "amount",
+      "u64"
+     ],
+     [
+      "min_sol_output",
+      "u64"
+     ]
+    ],
+    "sweep_creator_fee": [],
+    "sweep_protocol_fee": []
+   },
+   "instructions": {
+    "add_quote_control_mint": "020e3d8aaa8e0e5f",
+    "add_quote_mint": "6f79153828185ed1",
+    "admin_cto": "7d7ed6864de5bc59",
+    "admin_set_idl_authority": "08d960e79068c005",
+    "admin_update_token_incentives": "d10b7357d5177ccc",
+    "buy": "66063d1201daebea",
+    "buy_exact_quote_in_v2": "c2ab1c46684d5b2f",
+    "buy_exact_quote_in_v3": "e1f7501ed5b38488",
+    "buy_exact_sol_in": "38fc74089edfcd5f",
+    "buy_v2": "b817ee6167c5d33d",
+    "buy_v3": "07051dc4f5176550",
+    "claim_cashback": "253a237ebe35e4c5",
+    "claim_cashback_v2": "7af3cc415e741d37",
+    "claim_token_incentives": "1004471ccc01281b",
+    "close_user_volume_accumulator": "f945a4da9667548a",
+    "collect_creator_fee": "1416567bc61cdb84",
+    "collect_creator_fee_v2": "cf118af204221338",
+    "create": "181ec828051c0777",
+    "create_v2": "d6904cec5f8b31b4",
+    "distribute_creator_fees": "a572670079cef751",
+    "distribute_creator_fees_v2": "ffcb134ff444089f",
+    "distribute_fee_to_holders": "623691610246ad2b",
+    "extend_account": "ea66c2cb96483ee5",
+    "get_minimum_distributable_fee": "75e17fca865f4423",
+    "init_user_volume_accumulator": "5e06ca73ff60e8b7",
+    "initialize": "afaf6d1f0d989bed",
+    "initialize_quote_control": "ef49f5add1b15442",
+    "migrate": "9beae792ec9ea21e",
+    "migrate_bonding_curve_creator": "577c34bf3426d6e8",
+    "migrate_v2": "bbcb121fceedfe29",
+    "multi_hop_curve_swap": "e19a7516d756f667",
+    "remove_quote_control_mint": "df07fd1a51a5daa6",
+    "remove_quote_mint": "b141df2658d19e9b",
+    "sell": "33e685a4017f83ad",
+    "sell_v2": "5df6823ce7e940b2",
+    "sell_v3": "1c92de7726c469d5",
+    "set_creator": "fe94ff70cf8eaaa5",
+    "set_max_curve_depth": "209a98db8e6cdaa5",
+    "set_mayhem_virtual_params": "3da9bcbf99952a61",
+    "set_metaplex_creator": "8a60aed93055c5f6",
+    "set_params": "1beab2349302bb8d",
+    "set_quote_control_admin": "3e4fa1d3a5aad6d2",
+    "set_quote_control_mint_reserves": "74dc6b53bf2c2049",
+    "set_quote_control_reserves_admin": "a1c3dea5e165c03e",
+    "set_reserved_fee_recipients": "6faca2e87259d58e",
+    "set_virtual_quote_reserves": "6587bf6809581460",
+    "sweep_creator_fee": "20f6bf3408c949ba",
+    "sweep_protocol_fee": "0830be07b644b7e5",
+    "sync_user_volume_accumulator": "561fc057a3574fee",
+    "toggle_cashback_enabled": "7367e0ffbd5956c3",
+    "toggle_create_v2": "1cffe6f0ac6bcbab",
+    "toggle_mayhem_mode": "01096fd0641fffa3",
+    "update_buyback_config": "fbe0ab92a01a71e9",
+    "update_creator_fee_config": "3dafa0f9424288af",
+    "update_global_authority": "e3b54ac4d01561d5",
+    "update_holder_reward_config": "e1fc4204c723ec10"
+   },
+   "sha256": "6a19bad7758fb822cee79a91575e51a7bd60391c670200408676643e00a79a6d",
+   "types": {
+    "Shareholder": [
+     [
+      "address",
+      "pubkey"
+     ],
+     [
+      "share_bps",
+      "u16"
+     ]
+    ],
+    "SweepBondingCurveFeeEvent": [
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "mint",
+      "pubkey"
+     ],
+     [
+      "bonding_curve",
+      "pubkey"
+     ],
+     [
+      "quote_mint",
+      "pubkey"
+     ],
+     [
+      "recipient",
+      "pubkey"
+     ],
+     [
+      "amount",
+      "u64"
+     ],
+     [
+      "bucket",
+      "u8"
+     ]
+    ],
+    "TradeEvent": [
+     [
+      "mint",
+      "pubkey"
+     ],
+     [
+      "sol_amount",
+      "u64"
+     ],
+     [
+      "token_amount",
+      "u64"
+     ],
+     [
+      "is_buy",
+      "bool"
+     ],
+     [
+      "user",
+      "pubkey"
+     ],
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "virtual_sol_reserves",
+      "u64"
+     ],
+     [
+      "virtual_token_reserves",
+      "u64"
+     ],
+     [
+      "real_sol_reserves",
+      "u64"
+     ],
+     [
+      "real_token_reserves",
+      "u64"
+     ],
+     [
+      "fee_recipient",
+      "pubkey"
+     ],
+     [
+      "fee_basis_points",
+      "u64"
+     ],
+     [
+      "fee",
+      "u64"
+     ],
+     [
+      "creator",
+      "pubkey"
+     ],
+     [
+      "creator_fee_basis_points",
+      "u64"
+     ],
+     [
+      "creator_fee",
+      "u64"
+     ],
+     [
+      "track_volume",
+      "bool"
+     ],
+     [
+      "total_unclaimed_tokens",
+      "u64"
+     ],
+     [
+      "total_claimed_tokens",
+      "u64"
+     ],
+     [
+      "current_sol_volume",
+      "u64"
+     ],
+     [
+      "last_update_timestamp",
+      "i64"
+     ],
+     [
+      "ix_name",
+      "string"
+     ],
+     [
+      "mayhem_mode",
+      "bool"
+     ],
+     [
+      "cashback_fee_basis_points",
+      "u64"
+     ],
+     [
+      "cashback",
+      "u64"
+     ],
+     [
+      "buyback_fee_basis_points",
+      "u64"
+     ],
+     [
+      "buyback_fee",
+      "u64"
+     ],
+     [
+      "shareholders",
+      [
+       "vec",
+       "Shareholder"
+      ]
+     ],
+     [
+      "quote_mint",
+      "pubkey"
+     ],
+     [
+      "quote_amount",
+      "u64"
+     ],
+     [
+      "virtual_quote_reserves",
+      "u64"
+     ],
+     [
+      "real_quote_reserves",
+      "u64"
+     ],
+     [
+      "holder_rewards_bps",
+      "u64"
+     ],
+     [
+      "holder_rewards",
+      "u64"
+     ],
+     [
+      "creator_fee_unclaimed",
+      "u64"
+     ]
+    ]
+   }
+  },
+  "pump_amm": {
+   "accounts": {
+    "BondingCurve": "17b7f83760d8ac60",
+    "FeeConfig": "8f3492bbdb7b4c9b",
+    "GlobalConfig": "95089ccaa0fcb0d9",
+    "GlobalVolumeAccumulator": "ca2af62b8ebe1eff",
+    "Pool": "f19a6d0411b16dbc",
+    "SharingConfig": "d84a0900388c5d4b",
+    "UserVolumeAccumulator": "56ff700e66359afa"
+   },
+   "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+   "events": {
+    "AdminCtoPoolEvent": "2f23a3f9969d937a",
+    "AdminUpdateTokenIncentivesEvent": "93fa6c78f71d43de",
+    "BoostBuyAndBurnEvent": "3f451c16305cc2b9",
+    "BuyEvent": "67f4521f2cf57777",
+    "ClaimCashbackEvent": "e2d6f62107f293e5",
+    "ClaimTokenIncentivesEvent": "4facf631cd5bcee8",
+    "CloseUserVolumeAccumulatorEvent": "929fbdac925838f4",
+    "CollectCoinCreatorFeeEvent": "e8f5c2eeeada3a59",
+    "CreateConfigEvent": "6b34598137e25116",
+    "CreatePoolEvent": "b1310cd2a076a774",
+    "DepositEvent": "78f83d531f8e6b90",
+    "DisableEvent": "6bfdc14ce4ca1b68",
+    "ExtendAccountEvent": "6161d7905d92167c",
+    "InitBoostEvent": "ae7c4af90451f611",
+    "InitUserVolumeAccumulatorEvent": "86240d48e86582d8",
+    "MigratePoolCoinCreatorEvent": "aadd52c793a5f72e",
+    "ReservedFeeRecipientsEvent": "2bbcfa12dd4bbb5f",
+    "SellEvent": "3e2f370aa503dc2a",
+    "SetBondingCurveCoinCreatorEvent": "f2e7eb664163bdd3",
+    "SetBoostAuthorityEvent": "5980f08d5bca4769",
+    "SetMetaplexCoinCreatorEvent": "966bc77b7ccf66e4",
+    "SweepPoolFeeEvent": "82a42461e48287a5",
+    "SyncUserVolumeAccumulatorEvent": "c57aa77c74515bff",
+    "UpdateAdminEvent": "e198ab57f63f42ea",
+    "UpdateCreatorFeeConfigEvent": "98c67c7c6af67fbf",
+    "UpdateFeeConfigEvent": "5a1741233ef4bcd0",
+    "WithdrawEvent": "1609851aa02c47c0"
+   },
+   "instruction_args": {
+    "boost_buy_and_burn": [
+     [
+      "quote_amount_in",
+      "u64"
+     ],
+     [
+      "min_base_amount_burned",
+      "u64"
+     ]
+    ],
+    "buy": [
+     [
+      "base_amount_out",
+      "u64"
+     ],
+     [
+      "max_quote_amount_in",
+      "u64"
+     ],
+     [
+      "track_volume",
+      "bool"
+     ]
+    ],
+    "buy_exact_quote_in": [
+     [
+      "spendable_quote_in",
+      "u64"
+     ],
+     [
+      "min_base_amount_out",
+      "u64"
+     ],
+     [
+      "track_volume",
+      "bool"
+     ]
+    ],
+    "buy_exact_quote_in_v2": [
+     [
+      "spendable_quote_in",
+      "u64"
+     ],
+     [
+      "min_base_amount_out",
+      "u64"
+     ]
+    ],
+    "buy_v2": [
+     [
+      "base_amount_out",
+      "u64"
+     ],
+     [
+      "max_quote_amount_in",
+      "u64"
+     ]
+    ],
+    "create_pool": [
+     [
+      "index",
+      "u16"
+     ],
+     [
+      "base_amount_in",
+      "u64"
+     ],
+     [
+      "quote_amount_in",
+      "u64"
+     ],
+     [
+      "coin_creator",
+      "pubkey"
+     ],
+     [
+      "is_mayhem_mode",
+      "bool"
+     ],
+     [
+      "is_cashback_coin",
+      "bool"
+     ],
+     [
+      "creator_fee_bps",
+      "u64"
+     ],
+     [
+      "can_edit_creator_fee",
+      "bool"
+     ],
+     [
+      "is_holder_reward",
+      "bool"
+     ]
+    ],
+    "deposit": [
+     [
+      "lp_token_amount_out",
+      "u64"
+     ],
+     [
+      "max_base_amount_in",
+      "u64"
+     ],
+     [
+      "max_quote_amount_in",
+      "u64"
+     ]
+    ],
+    "init_boost": [],
+    "multi_hop_swap": [
+     [
+      "amount_in",
+      "u64"
+     ],
+     [
+      "min_amount_out",
+      "u64"
+     ]
+    ],
+    "sell": [
+     [
+      "base_amount_in",
+      "u64"
+     ],
+     [
+      "min_quote_amount_out",
+      "u64"
+     ]
+    ],
+    "sell_v2": [
+     [
+      "base_amount_in",
+      "u64"
+     ],
+     [
+      "min_quote_amount_out",
+      "u64"
+     ]
+    ],
+    "sweep_creator_fee": [],
+    "sweep_protocol_fee": [],
+    "withdraw": [
+     [
+      "lp_token_amount_in",
+      "u64"
+     ],
+     [
+      "min_base_amount_out",
+      "u64"
+     ],
+     [
+      "min_quote_amount_out",
+      "u64"
+     ]
+    ]
+   },
+   "instructions": {
+    "admin_cto_pool": "2d3da597680031bd",
+    "admin_update_token_incentives": "d10b7357d5177ccc",
+    "boost_buy_and_burn": "694406af000723a2",
+    "buy": "66063d1201daebea",
+    "buy_exact_quote_in": "c62e1552b4d9e870",
+    "buy_exact_quote_in_v2": "c2ab1c46684d5b2f",
+    "buy_v2": "b817ee6167c5d33d",
+    "claim_cashback": "253a237ebe35e4c5",
+    "claim_token_incentives": "1004471ccc01281b",
+    "close_user_volume_accumulator": "f945a4da9667548a",
+    "collect_coin_creator_fee": "a039592ab58b2b42",
+    "create_config": "c9cff3724b6f2fbd",
+    "create_pool": "e992d18ecf6840bc",
+    "deposit": "f223c68952e1f2b6",
+    "disable": "b9adbb5ad80feee9",
+    "extend_account": "ea66c2cb96483ee5",
+    "init_boost": "8ce9215e845ac28f",
+    "init_user_volume_accumulator": "5e06ca73ff60e8b7",
+    "migrate_pool_coin_creator": "d0089f044aaf103a",
+    "multi_hop_swap": "2b644913e9f66f94",
+    "sell": "33e685a4017f83ad",
+    "sell_v2": "5df6823ce7e940b2",
+    "set_boost_authority": "e3954c2a8227eacd",
+    "set_coin_creator": "d295802dbc3a4eaf",
+    "set_reserved_fee_recipients": "6faca2e87259d58e",
+    "sweep_creator_fee": "20f6bf3408c949ba",
+    "sweep_protocol_fee": "0830be07b644b7e5",
+    "sync_user_volume_accumulator": "561fc057a3574fee",
+    "toggle_boost": "75a1a04adf897663",
+    "toggle_cashback_enabled": "7367e0ffbd5956c3",
+    "toggle_mayhem_mode": "01096fd0641fffa3",
+    "transfer_creator_fees_to_pump": "8b348655e4e56cf1",
+    "transfer_creator_fees_to_pump_v2": "01214eb921432c5c",
+    "update_admin": "a1b028d53cb8b3e4",
+    "update_buyback_config": "fbe0ab92a01a71e9",
+    "update_creator_fee_config": "3dafa0f9424288af",
+    "update_fee_config": "68b867f258976b14",
+    "withdraw": "b712469c946da122"
+   },
+   "sha256": "b7d8c57a4d9c4dd0109a9ab893052352333252d4eedced10ac091d4d66cab89b",
+   "types": {
+    "BoostBuyAndBurnEvent": [
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "mint",
+      "pubkey"
+     ],
+     [
+      "bonding_curve",
+      "pubkey"
+     ],
+     [
+      "pool",
+      "pubkey"
+     ],
+     [
+      "authority",
+      "pubkey"
+     ],
+     [
+      "quote_amount_in_requested",
+      "u64"
+     ],
+     [
+      "quote_amount_in_used",
+      "u64"
+     ],
+     [
+      "base_amount_burned",
+      "u64"
+     ],
+     [
+      "virtual_quote_reserves",
+      "i128"
+     ],
+     [
+      "real_quote_reserves_after",
+      "u64"
+     ],
+     [
+      "base_reserves_after",
+      "u64"
+     ],
+     [
+      "boost_vault_remaining",
+      "u64"
+     ]
+    ],
+    "BuyEvent": [
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "base_amount_out",
+      "u64"
+     ],
+     [
+      "max_quote_amount_in",
+      "u64"
+     ],
+     [
+      "user_base_token_reserves",
+      "u64"
+     ],
+     [
+      "user_quote_token_reserves",
+      "u64"
+     ],
+     [
+      "pool_base_token_reserves",
+      "u64"
+     ],
+     [
+      "pool_quote_token_reserves",
+      "u64"
+     ],
+     [
+      "quote_amount_in",
+      "u64"
+     ],
+     [
+      "lp_fee_basis_points",
+      "u64"
+     ],
+     [
+      "lp_fee",
+      "u64"
+     ],
+     [
+      "protocol_fee_basis_points",
+      "u64"
+     ],
+     [
+      "protocol_fee",
+      "u64"
+     ],
+     [
+      "quote_amount_in_with_lp_fee",
+      "u64"
+     ],
+     [
+      "user_quote_amount_in",
+      "u64"
+     ],
+     [
+      "pool",
+      "pubkey"
+     ],
+     [
+      "user",
+      "pubkey"
+     ],
+     [
+      "user_base_token_account",
+      "pubkey"
+     ],
+     [
+      "user_quote_token_account",
+      "pubkey"
+     ],
+     [
+      "protocol_fee_recipient",
+      "pubkey"
+     ],
+     [
+      "protocol_fee_recipient_token_account",
+      "pubkey"
+     ],
+     [
+      "coin_creator",
+      "pubkey"
+     ],
+     [
+      "coin_creator_fee_basis_points",
+      "u64"
+     ],
+     [
+      "coin_creator_fee",
+      "u64"
+     ],
+     [
+      "track_volume",
+      "bool"
+     ],
+     [
+      "total_unclaimed_tokens",
+      "u64"
+     ],
+     [
+      "total_claimed_tokens",
+      "u64"
+     ],
+     [
+      "current_sol_volume",
+      "u64"
+     ],
+     [
+      "last_update_timestamp",
+      "i64"
+     ],
+     [
+      "min_base_amount_out",
+      "u64"
+     ],
+     [
+      "ix_name",
+      "string"
+     ],
+     [
+      "cashback_fee_basis_points",
+      "u64"
+     ],
+     [
+      "cashback",
+      "u64"
+     ],
+     [
+      "buyback_fee_basis_points",
+      "u64"
+     ],
+     [
+      "buyback_fee",
+      "u64"
+     ],
+     [
+      "virtual_quote_reserves",
+      "i128"
+     ],
+     [
+      "can_boost",
+      "bool"
+     ],
+     [
+      "base_supply",
+      "u64"
+     ],
+     [
+      "holder_rewards_bps",
+      "u64"
+     ],
+     [
+      "holder_rewards",
+      "u64"
+     ],
+     [
+      "creator_fee_unclaimed",
+      "u64"
+     ]
+    ],
+    "InitBoostEvent": [
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "mint",
+      "pubkey"
+     ],
+     [
+      "bonding_curve",
+      "pubkey"
+     ],
+     [
+      "pool",
+      "pubkey"
+     ],
+     [
+      "virtual_quote_reserves",
+      "i128"
+     ],
+     [
+      "real_quote_reserves_after",
+      "u64"
+     ]
+    ],
+    "Pool": [
+     [
+      "pool_bump",
+      "u8"
+     ],
+     [
+      "index",
+      "u16"
+     ],
+     [
+      "creator",
+      "pubkey"
+     ],
+     [
+      "base_mint",
+      "pubkey"
+     ],
+     [
+      "quote_mint",
+      "pubkey"
+     ],
+     [
+      "lp_mint",
+      "pubkey"
+     ],
+     [
+      "pool_base_token_account",
+      "pubkey"
+     ],
+     [
+      "pool_quote_token_account",
+      "pubkey"
+     ],
+     [
+      "lp_supply",
+      "u64"
+     ],
+     [
+      "coin_creator",
+      "pubkey"
+     ],
+     [
+      "is_mayhem_mode",
+      "bool"
+     ],
+     [
+      "is_cashback_coin",
+      "bool"
+     ],
+     [
+      "virtual_quote_reserves",
+      "i128"
+     ],
+     [
+      "creator_fee_bps",
+      "u64"
+     ],
+     [
+      "can_edit_creator_fee",
+      "bool"
+     ],
+     [
+      "is_holder_reward",
+      "bool"
+     ],
+     [
+      "protocol_fees",
+      "u64"
+     ],
+     [
+      "creator_fees",
+      "u64"
+     ]
+    ],
+    "SellEvent": [
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "base_amount_in",
+      "u64"
+     ],
+     [
+      "min_quote_amount_out",
+      "u64"
+     ],
+     [
+      "user_base_token_reserves",
+      "u64"
+     ],
+     [
+      "user_quote_token_reserves",
+      "u64"
+     ],
+     [
+      "pool_base_token_reserves",
+      "u64"
+     ],
+     [
+      "pool_quote_token_reserves",
+      "u64"
+     ],
+     [
+      "quote_amount_out",
+      "u64"
+     ],
+     [
+      "lp_fee_basis_points",
+      "u64"
+     ],
+     [
+      "lp_fee",
+      "u64"
+     ],
+     [
+      "protocol_fee_basis_points",
+      "u64"
+     ],
+     [
+      "protocol_fee",
+      "u64"
+     ],
+     [
+      "quote_amount_out_without_lp_fee",
+      "u64"
+     ],
+     [
+      "user_quote_amount_out",
+      "u64"
+     ],
+     [
+      "pool",
+      "pubkey"
+     ],
+     [
+      "user",
+      "pubkey"
+     ],
+     [
+      "user_base_token_account",
+      "pubkey"
+     ],
+     [
+      "user_quote_token_account",
+      "pubkey"
+     ],
+     [
+      "protocol_fee_recipient",
+      "pubkey"
+     ],
+     [
+      "protocol_fee_recipient_token_account",
+      "pubkey"
+     ],
+     [
+      "coin_creator",
+      "pubkey"
+     ],
+     [
+      "coin_creator_fee_basis_points",
+      "u64"
+     ],
+     [
+      "coin_creator_fee",
+      "u64"
+     ],
+     [
+      "cashback_fee_basis_points",
+      "u64"
+     ],
+     [
+      "cashback",
+      "u64"
+     ],
+     [
+      "buyback_fee_basis_points",
+      "u64"
+     ],
+     [
+      "buyback_fee",
+      "u64"
+     ],
+     [
+      "virtual_quote_reserves",
+      "i128"
+     ],
+     [
+      "can_boost",
+      "bool"
+     ],
+     [
+      "base_supply",
+      "u64"
+     ],
+     [
+      "holder_rewards_bps",
+      "u64"
+     ],
+     [
+      "holder_rewards",
+      "u64"
+     ],
+     [
+      "creator_fee_unclaimed",
+      "u64"
+     ]
+    ],
+    "SweepPoolFeeEvent": [
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "pool",
+      "pubkey"
+     ],
+     [
+      "base_mint",
+      "pubkey"
+     ],
+     [
+      "quote_mint",
+      "pubkey"
+     ],
+     [
+      "recipient",
+      "pubkey"
+     ],
+     [
+      "payer",
+      "pubkey"
+     ],
+     [
+      "amount",
+      "u64"
+     ],
+     [
+      "bucket",
+      "u8"
+     ]
+    ]
+   }
+  },
+  "pump_fees": {
+   "accounts": {
+    "BondingCurve": "17b7f83760d8ac60",
+    "BuybackVault": "99a64790b3bd89fb",
+    "DonationFeePda": "f6c56009c11e5d73",
+    "FeeConfig": "8f3492bbdb7b4c9b",
+    "FeeProgramGlobal": "a2a5f5311d2537f2",
+    "Global": "a7e8e8b1c86c727f",
+    "Pool": "f19a6d0411b16dbc",
+    "SharingConfig": "d84a0900388c5d4b",
+    "SocialFeePda": "8b6035112aa9ce96"
+   },
+   "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+   "events": {
+    "CreateFeeSharingConfigEvent": "8569aac8b874fb58",
+    "DonationFeePdaCranked": "1ed06b5db100df4e",
+    "DonationFeePdaCreated": "5e1489ef234de1eb",
+    "ExtendFeeConfigEvent": "e2cbe023990a5833",
+    "InitializeFeeConfigEvent": "598af4e60a38e27e",
+    "InitializeFeeProgramGlobalEvent": "28e99c4e5f0008c7",
+    "ResetFeeSharingConfigEvent": "cbcc97e27837d6f3",
+    "SetAuthorityEvent": "12af8442d0c957f2",
+    "SetClaimRateLimitEvent": "0d8f8febb5133328",
+    "SetDisableFlagsEvent": "0508b3413137917e",
+    "SetExoticFlatFeesEvent": "c38a6c0f084d4409",
+    "SetSocialClaimAuthorityEvent": "3c767f84ef34fe0e",
+    "SocialFeePdaClaimed": "3212c141edd2eaec",
+    "SocialFeePdaCreated": "b7b7da93187c89a9",
+    "SweepBuybackEvent": "2b382ad69939a689",
+    "UpdateAdminEvent": "e198ab57f63f42ea",
+    "UpdateFeeConfigEvent": "5a1741233ef4bcd0",
+    "UpdateFeeSharesEvent": "15bac4b85be4e1cb",
+    "UpdateStableFeeConfigEvent": "5e052bed6793e8f5",
+    "UpsertFeeTiersEvent": "ab59a9bb7aba21cc",
+    "UpsertStableFeeTiersEvent": "e8eded34629249f3"
+   },
+   "instruction_args": {
+    "sweep_buyback": [
+     [
+      "index",
+      "u8"
+     ]
+    ],
+    "upsert_fee_tiers": [
+     [
+      "fee_tiers",
+      [
+       "vec",
+       "FeeTier"
+      ]
+     ],
+     [
+      "offset",
+      "u8"
+     ]
+    ],
+    "upsert_stable_fee_tiers": [
+     [
+      "fee_tiers",
+      [
+       "vec",
+       "FeeTier"
+      ]
+     ],
+     [
+      "offset",
+      "u8"
+     ]
+    ]
+   },
+   "instructions": {
+    "admin_cto_sharing_config": "3c64909c408ab625",
+    "claim_social_fee_pda": "e115fb85a11ec7e2",
+    "claim_social_fee_pda_v2": "114df0863abc3595",
+    "crank_donation_fee_pda": "dc0abda7a9111945",
+    "create_donation_fee_pda": "f48b10580eff7a1a",
+    "create_fee_sharing_config": "c34e564c6f34fbd5",
+    "create_social_fee_pda": "90e03bd34ef8cadc",
+    "extend_fee_config": "44b3f45aad3811d9",
+    "get_fees": "e7257e55cf5b3f34",
+    "get_fees_with_quote_mint": "9aed8a5ca202a2bb",
+    "initialize_buyback": "fa81eca0e3246786",
+    "initialize_fee_config": "3ea214857941911b",
+    "initialize_fee_program_global": "23d78254e9387ca7",
+    "revoke_fee_sharing_authority": "12e99e27b9cf3a68",
+    "set_authority": "85fa25156ea31a79",
+    "set_claim_rate_limit": "b9d39faed4315804",
+    "set_disable_flags": "c2d9702372de33be",
+    "set_exotic_flat_fees": "1eea958afce62749",
+    "set_social_claim_authority": "9336b89a88edb999",
+    "sweep_buyback": "8a21cc26cfa19fe2",
+    "transfer_fee_sharing_authority": "ca0a4bc8a422d260",
+    "update_admin": "a1b028d53cb8b3e4",
+    "update_buyback_authority": "426271ca7925db6b",
+    "update_buyback_claim_rate_limit": "ba5f87beffc789aa",
+    "update_fee_config": "68b867f258976b14",
+    "update_fee_shares": "bd0d8863bba4ed23",
+    "update_fee_shares_v2": "6ffb31064e4e6a12",
+    "update_stable_fee_config": "6ba964b3869b92dd",
+    "upsert_fee_tiers": "e317960c4d565e04",
+    "upsert_stable_fee_tiers": "b5a0a2fc4a4ce0dd"
+   },
+   "sha256": "f111d2e5c9aa3d4e64d6a4e6b6f34300ccb1eaf6abc46834fe491836dc90aa74",
+   "types": {
+    "FeeConfig": [
+     [
+      "bump",
+      "u8"
+     ],
+     [
+      "admin",
+      "pubkey"
+     ],
+     [
+      "lp_fee_bps",
+      "u64"
+     ],
+     [
+      "protocol_fee_bps",
+      "u64"
+     ],
+     [
+      "creator_fee_bps",
+      "u64"
+     ],
+     [
+      "fee_tiers",
+      [
+       "vec",
+       "FeeTier"
+      ]
+     ],
+     [
+      "stable_fee_tiers",
+      [
+       "vec",
+       "FeeTier"
+      ]
+     ],
+     [
+      "lp_fee_bps",
+      "u64"
+     ],
+     [
+      "protocol_fee_bps",
+      "u64"
+     ],
+     [
+      "creator_fee_bps",
+      "u64"
+     ]
+    ],
+    "FeeTier": [
+     [
+      "market_cap_lamports_threshold",
+      "u128"
+     ],
+     [
+      "lp_fee_bps",
+      "u64"
+     ],
+     [
+      "protocol_fee_bps",
+      "u64"
+     ],
+     [
+      "creator_fee_bps",
+      "u64"
+     ]
+    ],
+    "Fees": [
+     [
+      "lp_fee_bps",
+      "u64"
+     ],
+     [
+      "protocol_fee_bps",
+      "u64"
+     ],
+     [
+      "creator_fee_bps",
+      "u64"
+     ]
+    ],
+    "SweepBuybackEvent": [
+     [
+      "index",
+      "u8"
+     ],
+     [
+      "sol_amount",
+      "u64"
+     ],
+     [
+      "token_amount",
+      "u64"
+     ],
+     [
+      "destination",
+      "pubkey"
+     ],
+     [
+      "buyback_vault",
+      "pubkey"
+     ],
+     [
+      "mint",
+      "pubkey"
+     ]
+    ],
+    "UpsertFeeTiersEvent": [
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "admin",
+      "pubkey"
+     ],
+     [
+      "fee_config",
+      "pubkey"
+     ],
+     [
+      "fee_tiers",
+      [
+       "vec",
+       "FeeTier"
+      ]
+     ],
+     [
+      "offset",
+      "u8"
+     ]
+    ],
+    "UpsertStableFeeTiersEvent": [
+     [
+      "timestamp",
+      "i64"
+     ],
+     [
+      "admin",
+      "pubkey"
+     ],
+     [
+      "fee_config",
+      "pubkey"
+     ],
+     [
+      "stable_fee_tiers",
+      [
+       "vec",
+       "FeeTier"
+      ]
+     ],
+     [
+      "offset",
+      "u8"
+     ]
+    ]
+   }
+  }
+ },
+ "ref": "2293f9a66c654e9fe82dc5e8f4618538f24bb35f",
+ "repo": "pump-fun/pump-public-docs"
+}

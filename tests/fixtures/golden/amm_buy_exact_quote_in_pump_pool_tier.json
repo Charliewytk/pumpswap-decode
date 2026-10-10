@@ -1,0 +1,115 @@
+{
+ "name": "amm_buy_exact_quote_in_pump_pool_tier",
+ "note": "buy_exact_quote_in on a SOL pump pool: fields swapped vs buy",
+ "signature": "21CcD9mYF8YGjQGNXtskFthMPrJ11QAz2U5ykJsWKcSUwcjzhA9NR7MvLBDL1dEQF59dUos67sKZ63Po5cWf16Th",
+ "slot": 455299368,
+ "block_time": 1791644876,
+ "context": {},
+ "record": {
+  "signature": "21CcD9mYF8YGjQGNXtskFthMPrJ11QAz2U5ykJsWKcSUwcjzhA9NR7MvLBDL1dEQF59dUos67sKZ63Po5cWf16Th",
+  "slot": 455299368,
+  "block_time": 1791644876,
+  "failed": false,
+  "steps": [
+   {
+    "kind": "ix",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "buy_exact_quote_in",
+    "data": "xi4VUrTZ6HAqPAAAAAAAAAEAAAAAAAAAAA==",
+    "accounts": {
+     "pool": "F3beTZ2NDSmydMRmsCBnrNsVjH6qRDLANogEBw8HpBbk",
+     "base_mint": "GEdgwDzqahUqj4AJd472wh94if8JsQW6yZgtH6m3pump",
+     "quote_mint": "So11111111111111111111111111111111111111112"
+    }
+   },
+   {
+    "kind": "ix",
+    "program": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+    "name": "get_fees_with_quote_mint",
+    "data": "mu2KXKICorsBs1ZZyt0EAAAAAAAAAAAAAAabiFf+q4GE+2h/Y0YYwDXaxDncGus7VZig8AAAAAAB"
+   },
+   {
+    "kind": "event",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "data": "Z/RSHyz1d3fMVMpqAAAAAMBIKwAAAAAAKjwAAAAAAADmiZUAAAAAACo8AAAAAAAAf7AnhiM0AAD2CoOmQwAAACo8AAAAAAAAFAAAAAAAAAAfAAAAAAAAAAUAAAAAAAAACAAAAAAAAACvOwAAAAAAAJA7AAAAAAAA0K3z5xyYRUBjXkCJuy+Z6qCbGkI9N2s5c5eSq2Dubn+23xMgZYdIKdE5Uc2ar62gddUJnkl+G/eWkcuDZiP0GjwEDChoo68HsUVubPGCSEhbbRJlynLluYmkIlA3DxIatt0hMnWOzQH2Ifps9I4gTlsL1QWC6MFZjIv2H7UV8klgjMwd/OlhtDt3nBkVBabi079F1aTbRhitdsgtYXVFNV0OMm1Matf/fY9TP8MJCFS9H+8ykQhAD19V155Lh4BRhRTyXqSd0wo0naHgtBZ3Y40WeN+niZCJ3JV3A4DGoLVLAAAAAAAAAHMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAASAAAAYnV5X2V4YWN0X3F1b3RlX2luAAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAABAAAAAAAAABjmYsXBAAAAAAAAAAAAAAAAaLlg61giQMAAAAAAAAAAAAAAAAAAAAAAEXtjQAAAAAA"
+   }
+  ],
+  "pool_balances": [
+   {
+    "owner": "F3beTZ2NDSmydMRmsCBnrNsVjH6qRDLANogEBw8HpBbk",
+    "mint": "GEdgwDzqahUqj4AJd472wh94if8JsQW6yZgtH6m3pump",
+    "pre": 57327179247743,
+    "post": 57327176411071
+   },
+   {
+    "owner": "F3beTZ2NDSmydMRmsCBnrNsVjH6qRDLANogEBw8HpBbk",
+    "mint": "So11111111111111111111111111111111111111112",
+    "pre": 290556414710,
+    "post": 290556429989
+   }
+  ]
+ },
+ "expected": {
+  "signature": "21CcD9mYF8YGjQGNXtskFthMPrJ11QAz2U5ykJsWKcSUwcjzhA9NR7MvLBDL1dEQF59dUos67sKZ63Po5cWf16Th",
+  "slot": 455299368,
+  "instructions": [
+   {
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "buy_exact_quote_in",
+    "args": {
+     "spendable_quote_in": 15402,
+     "min_base_amount_out": 1,
+     "track_volume": false
+    }
+   },
+   {
+    "program": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+    "name": "get_fees_with_quote_mint",
+    "args": null
+   }
+  ],
+  "swaps": [
+   {
+    "venue": "pumpswap",
+    "side": "buy",
+    "ix_name": "buy_exact_quote_in",
+    "outer_ix": "buy_exact_quote_in",
+    "pool": "F3beTZ2NDSmydMRmsCBnrNsVjH6qRDLANogEBw8HpBbk",
+    "base_mint": "GEdgwDzqahUqj4AJd472wh94if8JsQW6yZgtH6m3pump",
+    "quote_mint": "So11111111111111111111111111111111111111112",
+    "timestamp": 1791644876,
+    "base_amount": 2836672,
+    "quote_mode": "exact_quote_in",
+    "quote_cp": 15248,
+    "quote_user": 15402,
+    "quote_vault_delta": 15279,
+    "lp_fee": 31,
+    "protocol_fee": 8,
+    "coin_creator_fee": 115,
+    "lp_fee_bps": 20,
+    "protocol_fee_bps": 5,
+    "coin_creator_fee_bps": 75,
+    "total_fee_bps": 100,
+    "buyback_fee_bps": 5000,
+    "buyback_fee": 4,
+    "cashback": 0,
+    "fee_settlement": "paid_in_trade",
+    "fees_kept": 0,
+    "creator_fee_unclaimed": 9301317,
+    "pool_base_reserves": 57327179247743,
+    "pool_quote_reserves": 290556414710,
+    "virtual_quote_reserves": 17574893923,
+    "virtual_quote_reserves_after": 17574893923,
+    "effective_quote_reserves": 308131308633,
+    "base_supply": 995473251100066,
+    "can_boost": true,
+    "is_boost_buyback": false,
+    "trailing_bytes": 0,
+    "mode_inferred": false
+   }
+  ],
+  "boost_buybacks": [],
+  "fee_sweeps": [],
+  "other_events": []
+ }
+}

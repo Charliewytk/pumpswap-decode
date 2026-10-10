@@ -1,0 +1,138 @@
+{
+ "name": "amm_sell_v2_fees_kept_v_turns_negative",
+ "note": "sell_v2 on a pool with V=0: kept fees make V negative",
+ "signature": "49AamHH36vppNaruxkcRPoTR7fQX9SmJufK7oKFFSk83DWehozgACjrJPp22QcT6bDCXRDjLiD5UfmJ7YKox6zA8",
+ "slot": 455286819,
+ "block_time": 1791642103,
+ "context": {},
+ "record": {
+  "signature": "49AamHH36vppNaruxkcRPoTR7fQX9SmJufK7oKFFSk83DWehozgACjrJPp22QcT6bDCXRDjLiD5UfmJ7YKox6zA8",
+  "slot": 455286819,
+  "block_time": 1791642103,
+  "failed": false,
+  "steps": [
+   {
+    "kind": "ix",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "init_user_volume_accumulator",
+    "data": "XgbKc/9g6Lc="
+   },
+   {
+    "kind": "event",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "data": "hiQNSOhlgtgX+/o7OqV77a/udSIM+PgBIHmFlBUoPHc5X3/lgX/kiBf7+js6pXvtr+51Igz4+AEgeYWUFSg8dzlff+WBf+SI90nKagAAAAA="
+   },
+   {
+    "kind": "ix",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "sell_v2",
+    "data": "XfaCPOfpQLLVCeUaAAAAAAAAAAAAAAAA",
+    "accounts": {
+     "pool": "4tmvPmMZh2MGRx3FXt2oDs2qKsB5YBYziddeCAG5pL8Y",
+     "base_mint": "So11111111111111111111111111111111111111112",
+     "quote_mint": "FzPPKupx86xc6YtaFicYmQ4RTZYSh9VHvWiAgaUv95N8"
+    }
+   },
+   {
+    "kind": "event",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "data": "Pi83CqUD3Cr3ScpqAAAAANUJ5RoAAAAAAAAAAAAAAADVCeUaAAAAAAAAAAAAAAAAdqGeTCsAAAAZXC/TgScCAJEUHLtVAQAAGQAAAAAAAACyMLXaAAAAAAUAAAAAAAAAita9KwAAAADf42bgVAEAAFUNqbRUAQAAOdZ5UEj9FWL6YdPqzGub5AlvIQCt8q/hROvzYoVWQhkX+/o7OqV77a/udSIM+PgBIHmFlBUoPHc5X3/lgX/kiHBOi5Y94HyZFbXK4+ztL0aAh3+DdTh+2OOovHLKg+yM4NIgIyVLnFESinvp+/gPiPMXJHN/8mtvIBYWZxDnJHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAAReveFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   {
+    "kind": "ix",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "close_user_volume_accumulator",
+    "data": "+UWk2pZnVIo="
+   },
+   {
+    "kind": "event",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "data": "kp+9rJJYOPQX+/o7OqV77a/udSIM+PgBIHmFlBUoPHc5X3/lgX/kiPdJymoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+   }
+  ],
+  "pool_balances": [
+   {
+    "owner": "4tmvPmMZh2MGRx3FXt2oDs2qKsB5YBYziddeCAG5pL8Y",
+    "mint": "FzPPKupx86xc6YtaFicYmQ4RTZYSh9VHvWiAgaUv95N8",
+    "pre": 606388500782105,
+    "post": 604924813992831
+   },
+   {
+    "owner": "4tmvPmMZh2MGRx3FXt2oDs2qKsB5YBYziddeCAG5pL8Y",
+    "mint": "So11111111111111111111111111111111111111112",
+    "pre": 185969058166,
+    "post": 186420276043
+   }
+  ]
+ },
+ "expected": {
+  "signature": "49AamHH36vppNaruxkcRPoTR7fQX9SmJufK7oKFFSk83DWehozgACjrJPp22QcT6bDCXRDjLiD5UfmJ7YKox6zA8",
+  "slot": 455286819,
+  "instructions": [
+   {
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "init_user_volume_accumulator",
+    "args": null
+   },
+   {
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "sell_v2",
+    "args": {
+     "base_amount_in": 451217877,
+     "min_quote_amount_out": 0
+    }
+   },
+   {
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "close_user_volume_accumulator",
+    "args": null
+   }
+  ],
+  "swaps": [
+   {
+    "venue": "pumpswap",
+    "side": "sell",
+    "ix_name": "sell_v2",
+    "outer_ix": "sell_v2",
+    "pool": "4tmvPmMZh2MGRx3FXt2oDs2qKsB5YBYziddeCAG5pL8Y",
+    "base_mint": "So11111111111111111111111111111111111111112",
+    "quote_mint": "FzPPKupx86xc6YtaFicYmQ4RTZYSh9VHvWiAgaUv95N8",
+    "timestamp": 1791642103,
+    "base_amount": 451217877,
+    "quote_mode": "exact_base_in",
+    "quote_cp": 1467723027601,
+    "quote_user": 1463319858517,
+    "quote_vault_delta": -1463686789274,
+    "lp_fee": 3669307570,
+    "protocol_fee": 733861514,
+    "coin_creator_fee": 0,
+    "lp_fee_bps": 25,
+    "protocol_fee_bps": 5,
+    "coin_creator_fee_bps": 0,
+    "total_fee_bps": 30,
+    "buyback_fee_bps": 5000,
+    "buyback_fee": 366930757,
+    "cashback": 0,
+    "fee_settlement": "kept_in_pool",
+    "fees_kept": 366930757,
+    "creator_fee_unclaimed": 0,
+    "pool_base_reserves": 185969058166,
+    "pool_quote_reserves": 606388500782105,
+    "virtual_quote_reserves": 0,
+    "virtual_quote_reserves_after": -366930757,
+    "effective_quote_reserves": 606388500782105,
+    "base_supply": 0,
+    "can_boost": false,
+    "is_boost_buyback": false,
+    "trailing_bytes": 0,
+    "mode_inferred": false
+   }
+  ],
+  "boost_buybacks": [],
+  "fee_sweeps": [],
+  "other_events": [
+   "InitUserVolumeAccumulatorEvent",
+   "CloseUserVolumeAccumulatorEvent"
+  ]
+ }
+}

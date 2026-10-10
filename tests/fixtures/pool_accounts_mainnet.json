@@ -1,0 +1,36 @@
+{
+ "slot": 455303728,
+ "note": "PumpSwap Pool accounts (getMultipleAccounts, base64) for pools that appear in the golden fixtures",
+ "accounts": [
+  {
+   "address": "G3F4CZsFvF7XTbCDckWMtmo8WNm1NeDF3H8aXYrskhCU",
+   "data_b64": "8ZptBBGxbbz9AABYumNaX5oL3kwGe6nVPL0YlexoP6Wz+dMO9O7XxFoHhQfCu9E8K9IrUphorQMV82UGBUSRq26rhvbYnowlYlv/BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAFM8W5gbEL7Tyzc7uHqrJ8Ve5SU0tAv/yoxo3G0WVmOfri0y2xn2CPDWcwBOn27fg/EjSV5U5T8quP8879eZ4FhqsOoj/DiSBege2f242lcctQq+w0JEXy/qgaLCfJP1dDsQmtZ0AMAAMpxtIWQz4QhihWxzADTvgtKEkStWPw1bNYgMz4L+r7fAACvjAYYBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnnBwAAAAAAEM4PAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+   "expect": {
+    "virtual_quote_reserves": 17582951599,
+    "creator_fee_bps": 0,
+    "protocol_fees": 517897,
+    "creator_fees": 1035792
+   }
+  },
+  {
+   "address": "B6PdxJyHyrkmgfRSjhumCcuPUts6GE2jqEHG1ZzjV8B",
+   "data_b64": "8ZptBBGxbbz9AACcNXmlUUxkqVGBhlapZB5tI5fjKMAUNXpO0tVU6sOR61LydQgaxW7upreL23XAXUoBW/mGbsNlOmR+OVEWVlXRBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAHhj94FPurvfOtya3GsfK0CIxuhQLdsgVccZ9yAs3qEsWynwPijoU8W+N8eV6mDFX5ZSABPbl6V1G/bPLnEKDl9A/EzpfqV+RXetbrsQMNKF2ny2I72CmXe7TA88E9W0M7vyWtZ0AMAAOtdNkKdWzGfWvP8Nlel1gWhO1UjNn9FbYG3G7c2EXRmAAC7pPL/////////////////AAAAAAAAAAAAAK1XAAAAAAAAmAMNAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+   "expect": {
+    "virtual_quote_reserves": -875333,
+    "creator_fee_bps": 0,
+    "protocol_fees": 22445,
+    "creator_fees": 852888
+   }
+  },
+  {
+   "address": "4tmvPmMZh2MGRx3FXt2oDs2qKsB5YBYziddeCAG5pL8Y",
+   "data_b64": "8ZptBBGxbbz+AABZORoSObcx+haI2Zk4WMdrgBKWt1tA1BwX7ipXMJh80AabiFf+q4GE+2h/Y0YYwDXaxDncGus7VZig8AAAAAAB3rcIp7sKTRxBjqQTstc8ncyg/fCtY8B/qVNwL9Ga/Ykhk+qbNM7glAtTHBce00U5kc5kijDAtT2gPcl66lsbeftCD0FB7UMsQVwuBmPHXpkWNM8pHc4Z7SWMeBoQxbxXtBNf7kKUJO5vMiOChL9QrnivbBrY7pxSPtRAbWemPvJkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+   "expect": {
+    "virtual_quote_reserves": 0,
+    "creator_fee_bps": 0,
+    "protocol_fees": 0,
+    "creator_fees": 0
+   }
+  }
+ ]
+}

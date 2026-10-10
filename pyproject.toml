@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pumpswap-decode"
+version = "0.1.0"
+description = "Decode PumpSwap and pump.fun swaps from Solana transactions: signed virtual reserves, instruction-variant field semantics, the fee tier schedule, and Boost buybacks."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["solana", "pump.fun", "pumpswap", "amm", "decoder", "anchor"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pumpswap_decode"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "tools", "README.md", "LICENSE", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

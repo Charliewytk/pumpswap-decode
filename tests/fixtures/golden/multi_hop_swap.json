@@ -1,0 +1,158 @@
+{
+ "name": "multi_hop_swap",
+ "note": "PumpSwap multi_hop_swap route: pool and curve legs, fees charged once per route and kept",
+ "signature": "5hzz52QuneGdz7qoEyuVNbLXsq7eG5WscvQC3z11Q2hPHYN9KNVpH3vh36szJHPZkwQVAR1m1xUFoggc2K9puymW",
+ "slot": 455292698,
+ "block_time": 1791643402,
+ "context": {},
+ "record": {
+  "signature": "5hzz52QuneGdz7qoEyuVNbLXsq7eG5WscvQC3z11Q2hPHYN9KNVpH3vh36szJHPZkwQVAR1m1xUFoggc2K9puymW",
+  "slot": 455292698,
+  "block_time": 1791643402,
+  "failed": false,
+  "steps": [
+   {
+    "kind": "ix",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "multi_hop_swap",
+    "data": "K2RJE+n2b5TrtLCT0gIAAAEAAAAAAAAA",
+    "accounts": {
+     "hops": [
+      {
+       "base_mint": "EjHMibbg7XToMGAtBCEccb6S8wPc3RN6muuf5jnnpump",
+       "quote_mint": "4qq7Ptd8ZZPg2EPaoiscR5sTXD6vZDea3QYxtCiHxp3H",
+       "pool_or_curve": "HcDWaGS9xd8beEe3oCVDVGh13wdRrTGPxNFXAsGzCo3w"
+      },
+      {
+       "base_mint": "4qq7Ptd8ZZPg2EPaoiscR5sTXD6vZDea3QYxtCiHxp3H",
+       "quote_mint": "So11111111111111111111111111111111111111112",
+       "pool_or_curve": "GoaR9oCiKyPK1FFPrpLFcRr4AWrtPjm1DCrqGVL3KCR6"
+      }
+     ]
+    }
+   },
+   {
+    "kind": "ix",
+    "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "name": "multi_hop_curve_swap",
+    "data": "4Zp1FtdW9mfrtLCT0gIAAAEAAAAC"
+   },
+   {
+    "kind": "event",
+    "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "data": "vdt/007mYe7L/NG0geA8qtn2Eivk2nRgL+tw52TCQjg4Ys2kyba6PwAAAAAAAAAA67Swk9ICAAAANiVU3+mjiwIVsmxsyL37Pka9nFv9JDSoHGwOh3qaHXUKT8pqAAAAAAAAAAAAAAAAd8myh9EjAwAAAAAAAAAAAHcxoDtAJQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/1qhmxBjC40iLi7Tir1NayG4HnhUqR9rhiqFiUELjHQeAAAAAAAAAIGaTgwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAG11bHRpX2hvcF9zd2FwAAAAAAAAAAAAAAAAAAAAAACIEwAAAAAAAAAAAAAAAAAAAAAAADkVVop/T6nxhjHSZYwLaPaZWfILSLuHsB8yTsYWosWYiixZBhAAAACGuDKQwxEAAP8CgNQhAwAAHgAAAAAAAACBmk4MAAAAAHuEL1sAAAAA"
+   },
+   {
+    "kind": "event",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "data": "Pi83CqUD3CoKT8pqAAAAAAmSCvoPAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlk2WzmuOAACcgqT7IwAAAFnnCAQAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAN4QAAAAAAABZ5wgEAAAAACJjCAQAAAAA6s3OH1eft2xXFVSw6wNnR1ouA4I5FEksWkrA0XakJFE2JVTf6aOLAhWybGzIvfs+Rr2cW/0kNKgcbA6HepoddQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAINV/eiK6oC4s1EK78mowU0mOKUbVIGGxdHRaXSiT1xsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtbRfTgOf62CNf9q7FJ6rWxMd/jM2SJbv366CiEj3BzIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAAG0IAAAAAAADvVv7/////////////////AJRKaEIugwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+   }
+  ],
+  "pool_balances": [
+   {
+    "owner": "GoaR9oCiKyPK1FFPrpLFcRr4AWrtPjm1DCrqGVL3KCR6",
+    "mint": "4qq7Ptd8ZZPg2EPaoiscR5sTXD6vZDea3QYxtCiHxp3H",
+    "pre": 156593678601622,
+    "post": 156662298107807
+   },
+   {
+    "owner": "GoaR9oCiKyPK1FFPrpLFcRr4AWrtPjm1DCrqGVL3KCR6",
+    "mint": "So11111111111111111111111111111111111111112",
+    "pre": 154545717916,
+    "post": 154478042463
+   }
+  ]
+ },
+ "expected": {
+  "signature": "5hzz52QuneGdz7qoEyuVNbLXsq7eG5WscvQC3z11Q2hPHYN9KNVpH3vh36szJHPZkwQVAR1m1xUFoggc2K9puymW",
+  "slot": 455292698,
+  "instructions": [
+   {
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "multi_hop_swap",
+    "args": {
+     "amount_in": 3103444219115,
+     "min_amount_out": 1
+    }
+   },
+   {
+    "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "name": "multi_hop_curve_swap",
+    "args": {
+     "amount_in": 3103444219115,
+     "hop_fees": "02"
+    }
+   }
+  ],
+  "swaps": [
+   {
+    "venue": "pumpfun",
+    "side": "sell",
+    "ix_name": "multi_hop_swap",
+    "mint": "EjHMibbg7XToMGAtBCEccb6S8wPc3RN6muuf5jnnpump",
+    "quote_mint": "4qq7Ptd8ZZPg2EPaoiscR5sTXD6vZDea3QYxtCiHxp3H",
+    "timestamp": 1791643402,
+    "base_amount": 3103444219115,
+    "quote_cp": 68825984138,
+    "quote_user": 68619506185,
+    "protocol_fee": 0,
+    "creator_fee": 206477953,
+    "protocol_fee_bps": 0,
+    "creator_fee_bps": 30,
+    "total_fee_bps": 30,
+    "buyback_fee_bps": 5000,
+    "buyback_fee": 0,
+    "cashback": 0,
+    "fee_settlement": "kept_on_curve",
+    "fees_kept": 206477953,
+    "virtual_quote_reserves_after": 19531635538054,
+    "virtual_token_reserves_after": 883807761910135,
+    "real_quote_reserves_after": 3443833963263,
+    "real_token_reserves_after": 603907761910135,
+    "mayhem_mode": false,
+    "trailing_bytes": 0
+   },
+   {
+    "venue": "pumpswap",
+    "side": "sell",
+    "ix_name": "multi_hop_swap",
+    "outer_ix": "multi_hop_swap",
+    "pool": "GoaR9oCiKyPK1FFPrpLFcRr4AWrtPjm1DCrqGVL3KCR6",
+    "base_mint": "4qq7Ptd8ZZPg2EPaoiscR5sTXD6vZDea3QYxtCiHxp3H",
+    "quote_mint": "So11111111111111111111111111111111111111112",
+    "timestamp": 1791643402,
+    "base_amount": 68619506185,
+    "quote_mode": "exact_base_in",
+    "quote_cp": 67692377,
+    "quote_user": 67658530,
+    "quote_vault_delta": -67675453,
+    "lp_fee": 0,
+    "protocol_fee": 33847,
+    "coin_creator_fee": 0,
+    "lp_fee_bps": 0,
+    "protocol_fee_bps": 5,
+    "coin_creator_fee_bps": 0,
+    "total_fee_bps": 5,
+    "buyback_fee_bps": 5000,
+    "buyback_fee": 16923,
+    "cashback": 0,
+    "fee_settlement": "kept_in_pool",
+    "fees_kept": 16924,
+    "creator_fee_unclaimed": 0,
+    "pool_base_reserves": 156593678601622,
+    "pool_quote_reserves": 154545717916,
+    "virtual_quote_reserves": -108817,
+    "virtual_quote_reserves_after": -125741,
+    "effective_quote_reserves": 154545609099,
+    "base_supply": 988659635997332,
+    "can_boost": false,
+    "is_boost_buyback": false,
+    "trailing_bytes": 0,
+    "mode_inferred": false
+   }
+  ],
+  "boost_buybacks": [],
+  "fee_sweeps": [],
+  "other_events": []
+ }
+}

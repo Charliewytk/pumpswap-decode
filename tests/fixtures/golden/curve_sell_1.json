@@ -1,0 +1,74 @@
+{
+ "name": "curve_sell_1",
+ "note": "pump.fun bonding curve sell",
+ "signature": "1L6ngGZ1oDFy6PeKvY1ARWRa7ofvahg7nP2wK7Gz7zBiYEu4gL1jD7iBLrbksjTrh4ZqTz5L3rAMHyo4PMZTuPd",
+ "slot": 455290235,
+ "block_time": 1791642856,
+ "context": {},
+ "record": {
+  "signature": "1L6ngGZ1oDFy6PeKvY1ARWRa7ofvahg7nP2wK7Gz7zBiYEu4gL1jD7iBLrbksjTrh4ZqTz5L3rAMHyo4PMZTuPd",
+  "slot": 455290235,
+  "block_time": 1791642856,
+  "failed": false,
+  "steps": [
+   {
+    "kind": "ix",
+    "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "name": "sell_v3",
+    "data": "HJLedybEadV9k5ELpAIAAAEAAAAAAAAA"
+   },
+   {
+    "kind": "event",
+    "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "data": "vdt/007mYe6sLFG9IePhWhzxUCKGnBPgo3JpJQx4ESsTHp6SLL1ohekmUSUAAAAAfZORC6QCAAAA2G2XAmPVcVMdrvpTDtfQLJEi0cRxoyNdW6e3FRXXDk7oTMpqAAAAAFUUJFMTAAAA7H7f1LtgAQBVaABXDAAAAOzmzIgqYgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAAAAAAEXBWgAAAAAAJvl0xZJOvOWlu3k5tKa7vps1TXUbiEjfx4i49JbUiNEeAAAAAAAAANOoHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAHNlbGwAAAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAAomAtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADpJlElAAAAAFUUJFMTAAAAVWgAVwwAAAAeAAAAAAAAANOoHAAAAAAAiCz6IwAAAAA="
+   }
+  ],
+  "pool_balances": []
+ },
+ "expected": {
+  "signature": "1L6ngGZ1oDFy6PeKvY1ARWRa7ofvahg7nP2wK7Gz7zBiYEu4gL1jD7iBLrbksjTrh4ZqTz5L3rAMHyo4PMZTuPd",
+  "slot": 455290235,
+  "instructions": [
+   {
+    "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "name": "sell_v3",
+    "args": {
+     "amount": 2903591981949,
+     "min_sol_output": 1
+    }
+   }
+  ],
+  "swaps": [
+   {
+    "venue": "pumpfun",
+    "side": "sell",
+    "ix_name": "sell",
+    "mint": "Cb6KaE5af9fP2HC8xpmna5uKxXeKZosu8SXbe1pSxAUU",
+    "quote_mint": "11111111111111111111111111111111",
+    "timestamp": 1791642856,
+    "base_amount": 2903591981949,
+    "quote_cp": 626075369,
+    "quote_user": 618249425,
+    "protocol_fee": 5947717,
+    "creator_fee": 1878227,
+    "protocol_fee_bps": 95,
+    "creator_fee_bps": 30,
+    "total_fee_bps": 125,
+    "buyback_fee_bps": 5000,
+    "buyback_fee": 2973858,
+    "cashback": 0,
+    "fee_settlement": "kept_on_curve",
+    "fees_kept": 4852086,
+    "virtual_quote_reserves_after": 82999252053,
+    "virtual_token_reserves_after": 387834823278316,
+    "real_quote_reserves_after": 52999252053,
+    "real_token_reserves_after": 107934823278316,
+    "mayhem_mode": false,
+    "trailing_bytes": 0
+   }
+  ],
+  "boost_buybacks": [],
+  "fee_sweeps": [],
+  "other_events": []
+ }
+}

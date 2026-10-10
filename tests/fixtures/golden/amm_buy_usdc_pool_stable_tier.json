@@ -1,0 +1,115 @@
+{
+ "name": "amm_buy_usdc_pool_stable_tier",
+ "note": "buy on a USDC-quoted pump pool: stable fee tiers",
+ "signature": "5CP2etGbooDQR3iLqLKMUzwMSEHeVHp2c12WuEizyz2K5kLXCK61tNQAn3vsHe71xzR7DxCmU9HND3cPrT7Z3Knz",
+ "slot": 455285639,
+ "block_time": 1791641846,
+ "context": {},
+ "record": {
+  "signature": "5CP2etGbooDQR3iLqLKMUzwMSEHeVHp2c12WuEizyz2K5kLXCK61tNQAn3vsHe71xzR7DxCmU9HND3cPrT7Z3Knz",
+  "slot": 455285639,
+  "block_time": 1791641846,
+  "failed": false,
+  "steps": [
+   {
+    "kind": "ix",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "buy",
+    "data": "ZgY9EgHa6+raGfk2AQAAADRCfQEAAAAAAQ==",
+    "accounts": {
+     "pool": "FwDVaKmriBr4BQhA1J54WKkMECPjxNZm4gN9ye2xnbN6",
+     "base_mint": "Vb3KBFsvX2TMXJvrv53RdTt9CBhHE2fRXvynYNZpump",
+     "quote_mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    }
+   },
+   {
+    "kind": "ix",
+    "program": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+    "name": "get_fees_with_quote_mint",
+    "data": "mu2KXKICorsBscnVYTkEAAAAAAAAAAAAAMb6evO+2606PWXzaqvJdDGxu+TC0vbg5HymAgNFL11h"
+   },
+   {
+    "kind": "event",
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "data": "Z/RSHyz1d3f2SMpqAAAAANoZ+TYBAAAANEJ9AQAAAADwwyLqJQAAAIsEqt8AAAAASGQYRzMVAADNpXWjGAAAAAUVcgEAAAAAFAAAAAAAAAB8vQAAAAAAAAUAAAAAAAAAXy8AAAAAAACB0nIBAAAAAFM6dQEAAAAA3ecbLUsQml1XptRDTS4WUcTE0P2bJUqFEVaDNvy08eeis+IxweI1/U2ZS3JJrr88iH6rVVFoVNINmxnGG3JhvDaxQ9zmd1rYp3O4tzheW8kz25oDmoAMLAQGo/ekMmq6WhJoeasrDUH8wZL/lBrnMojPFg0U9VfsZ98JManVBOH/g4OBi6j6KMPNO21ek/n6uPCXm8NyFazFskaHe6jDybv7QnRM6ecn/DzL5dEKCPJ13dER0dsDAXgwAvknC9z6sYgrE7gqrZhIWYwUKRRukTZUp83ycwEWsfoQztvqIfQ8AAAAAAAAAHM4AgAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2hn5NgEAAAADAAAAYnV5AAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAArxcAAAAAAAB0LPqVAAAAAAAAAAAAAAAAAdv2h1rejAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+   }
+  ],
+  "pool_balances": [
+   {
+    "owner": "FwDVaKmriBr4BQhA1J54WKkMECPjxNZm4gN9ye2xnbN6",
+    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "pre": 105821611469,
+    "post": 105845913678
+   },
+   {
+    "owner": "FwDVaKmriBr4BQhA1J54WKkMECPjxNZm4gN9ye2xnbN6",
+    "mint": "Vb3KBFsvX2TMXJvrv53RdTt9CBhHE2fRXvynYNZpump",
+    "pre": 23309980296264,
+    "post": 23304763034222
+   }
+  ]
+ },
+ "expected": {
+  "signature": "5CP2etGbooDQR3iLqLKMUzwMSEHeVHp2c12WuEizyz2K5kLXCK61tNQAn3vsHe71xzR7DxCmU9HND3cPrT7Z3Knz",
+  "slot": 455285639,
+  "instructions": [
+   {
+    "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "name": "buy",
+    "args": {
+     "base_amount_out": 5217262042,
+     "max_quote_amount_in": 24986164,
+     "track_volume": true
+    }
+   },
+   {
+    "program": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+    "name": "get_fees_with_quote_mint",
+    "args": null
+   }
+  ],
+  "swaps": [
+   {
+    "venue": "pumpswap",
+    "side": "buy",
+    "ix_name": "buy",
+    "outer_ix": "buy",
+    "pool": "FwDVaKmriBr4BQhA1J54WKkMECPjxNZm4gN9ye2xnbN6",
+    "base_mint": "Vb3KBFsvX2TMXJvrv53RdTt9CBhHE2fRXvynYNZpump",
+    "quote_mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "timestamp": 1791641846,
+    "base_amount": 5217262042,
+    "quote_mode": "exact_base_out",
+    "quote_cp": 24253701,
+    "quote_user": 24459859,
+    "quote_vault_delta": 24302209,
+    "lp_fee": 48508,
+    "protocol_fee": 12127,
+    "coin_creator_fee": 145523,
+    "lp_fee_bps": 20,
+    "protocol_fee_bps": 5,
+    "coin_creator_fee_bps": 60,
+    "total_fee_bps": 85,
+    "buyback_fee_bps": 5000,
+    "buyback_fee": 6063,
+    "cashback": 0,
+    "fee_settlement": "paid_in_trade",
+    "fees_kept": 0,
+    "creator_fee_unclaimed": 0,
+    "pool_base_reserves": 23309980296264,
+    "pool_quote_reserves": 105821611469,
+    "virtual_quote_reserves": 2516200564,
+    "virtual_quote_reserves_after": 2516200564,
+    "effective_quote_reserves": 108337812033,
+    "base_supply": 999311559620315,
+    "can_boost": true,
+    "is_boost_buyback": false,
+    "trailing_bytes": 0,
+    "mode_inferred": false
+   }
+  ],
+  "boost_buybacks": [],
+  "fee_sweeps": [],
+  "other_events": []
+ }
+}
