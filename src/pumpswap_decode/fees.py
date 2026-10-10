@@ -2,7 +2,7 @@
 
 PumpSwap charges three fees per swap (LP, protocol, coin creator), in basis points. For pools created by pump.fun
 migrations ("pump pools") the rates come from a market-cap tier table in the FeeConfig account owned by the pump fees
-program. Mainnet has 25 SOL tiers: the per-swap total falls from 125 bps (below 420 SOL market cap) to 30 bps (above
+program. Mainnet has 25 SOL tiers: the per-swap total falls from 125 bps (below 420 SOL market cap) to 30 bps (at or above
 98,240 SOL), i.e. 250 to 60 bps for a buy plus a sell. USDC-quoted pools use a parallel 25-tier table in USDC units.
 
 Selection rules (mirroring the public pump-swap-sdk `computeFeesBps`):

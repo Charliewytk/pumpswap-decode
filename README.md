@@ -5,8 +5,8 @@ swaps on Solana. Give it a transaction from `getTransaction` and it returns norm
 quote amount actually paid or received, every fee, the pool reserves the trade priced on, and how the fees were
 settled. It is read-only tooling for public on-chain data. It never builds, signs or sends a transaction.
 
-It exists because these programs changed in ways that quietly break decoders that look correct. Each of the traps
-below is covered by tests against real mainnet transactions.
+It exists because these programs changed in ways that quietly break decoders that look correct. Each trap below has
+tests; most are covered by real mainnet transactions (see "Covered by fixtures" for exactly which).
 
 ```
 pip install -e .            # Python 3.10+, no runtime dependencies
@@ -16,7 +16,7 @@ pip install pytest && pytest
 ```python
 from pumpswap_decode import decode_transaction
 
-tx = ...  # a getTransaction result: encoding "json" or "jsonParsed", maxSupportedTransactionVersion >= 0
+tx = ...  # a getTransaction result: encoding "json" or "jsonParsed", maxSupportedTransactionVersion 1
 for swap in decode_transaction(tx)["swaps"]:
     print(swap["venue"], swap["side"], swap["base_amount"], swap["quote_user"], swap["total_fee_bps"])
 ```
@@ -67,8 +67,8 @@ component is `ceil(amount * bps / 10_000)`.
 ### 3. The fee schedule: 25 market-cap tiers, 125 → 30 bps per swap
 
 For pump pools (pools created by migration), the rates come from the `FeeConfig` account of the pump fees program.
-Mainnet has 25 SOL tiers. The per-swap total falls from **125 bps** below 420 SOL market cap to **30 bps** above
-98,240 SOL. That is **250 → 60 bps for a round trip** (a buy plus a sell). The rules, as checked against mainnet:
+Mainnet has 25 SOL tiers. The per-swap total falls from **125 bps** below 420 SOL market cap to **30 bps** at or
+above 98,240 SOL. That is **250 → 60 bps for a round trip** (a buy plus a sell). The rules, as checked against mainnet:
 
 - **non-pump pools:** flat fees, 25 / 5 / 0 bps (LP / protocol / creator);
 - **SOL-quoted pump pools:** SOL tiers, by market cap = effective quote × base supply / base reserves;
@@ -77,8 +77,8 @@ Mainnet has 25 SOL tiers. The per-swap total falls from **125 bps** below 420 SO
 - **per-pool creator fee:** a configured creator fee replaces the tier's creator part;
 - **boost buybacks:** they pay nothing (trap 5).
 
-The golden test recomputes the fee rates of every fixture swap from a FeeConfig snapshot taken the same day and
-matches all of them.
+The golden test recomputes the fee rates of every single-hop PumpSwap fixture swap from a FeeConfig snapshot taken
+the same day and matches all of them. Multi-hop legs and pump.fun curve fee rates are not checked against the tiers.
 
 ### 4. v2 trades keep fees in the pool, and sweeps pay them out later
 
@@ -125,7 +125,7 @@ variant. Exact-in buys price `amount - 1`, and exact-token buys pay `ceil(v_quot
 ## Golden test set
 
 `tests/fixtures/golden/` holds 22 mainnet transactions, all decoded from public signatures on 10 Oct 2026, about
-130 KB in total. Each fixture stores:
+86 KB in total. Each fixture stores:
 
 - the signature and slot;
 - a **trimmed record**: the ordered PumpSwap / pump.fun instructions with only their pool and mint accounts, the
@@ -159,11 +159,10 @@ Covered by fixtures:
 
 **Decoded from the IDL only (no golden fixture yet):**
 
-- `buy_exact_quote_in_v2` on PumpSwap: its field mapping was checked on 2 mainnet events, but none passed the
-  fixture privacy filter;
+- `buy_exact_quote_in_v2` on PumpSwap (no golden fixture yet);
 - `SweepPoolFeeEvent` / `SweepBondingCurveFeeEvent` (synthetic tests only);
 - all pump fees program instructions and events (`upsert_fee_tiers`, `upsert_stable_fee_tiers`, `sweep_buyback`);
-- pump.fun `buy_v2`, `buy_v3`, `buy_exact_quote_in_v3`, `sell`, `sell_v2`, `multi_hop_curve_swap` arguments;
+- pump.fun `buy_v2`, `buy_v3`, `buy_exact_quote_in_v3`, `sell`, `sell_v2` arguments;
 - `deposit`, `withdraw`, `create_pool`, `init_boost`;
 - non-SOL, non-USDC ("exotic") quote pools and per-pool creator fees (unit tests only).
 
@@ -171,7 +170,9 @@ Covered by fixtures:
 
 - zero-fee trades on mayhem-mode curves do not reproduce from the event reserves and are not modelled;
 - multi-hop legs only charge the fees of their hop, so they are excluded from the tier check;
-- the "pump pool" test in the fee check uses `base_supply > 0` from the event.
+- the "pump pool" test in the fee check uses `base_supply > 0` from the event;
+- cashback coins have no fixture, and the fee identity ignores the `cashback` amount;
+- the per-pool creator fee is applied without checking the global `creatorFeeConfigurable` switch.
 
 ## Program upgrades
 

@@ -3,7 +3,7 @@
 Two steps, so tests can run on small stored records:
 
 1. `trim_transaction(tx)` takes a `getTransaction` result (encoding "json" or "jsonParsed",
-   maxSupportedTransactionVersion >= 0) and keeps only what decoding needs: the ordered PumpSwap / pump.fun / pump
+   maxSupportedTransactionVersion 1) and keeps only what decoding needs: the ordered PumpSwap / pump.fun / pump
    fees instructions (raw data plus pool and mint accounts), their emit_cpi event payloads, and the token balances
    of the pools involved. Signer, fee payer and user accounts are not kept outside the raw event bytes.
 2. `decode_trimmed(record)` turns that record into normalized swaps, boost buybacks and fee sweeps.
